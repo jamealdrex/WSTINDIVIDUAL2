@@ -25,7 +25,20 @@
             background: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 40px 20px;
+            padding: 70px 20px 40px;
+        }
+
+        .brand {
+            position: fixed;
+            top: 18px;
+            left: 20px;
+            z-index: 10;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: lowercase;
         }
 
         .container {
@@ -137,6 +150,8 @@
 
 
 <body>
+
+<a href="/" class="brand">desyenti</a>
 
 <div class="container">
 
