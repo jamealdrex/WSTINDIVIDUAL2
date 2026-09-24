@@ -1,63 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Task</title>
+    <title>TASK MANAGER | Add Task</title>
 
     <style>
+        :root {
+            --bg: #f3f4f6;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --text: #111827;
+            --muted: #6b7280;
+            --button: #111827;
+            --button-hover: #374151;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: #df18e9;
+            background: var(--bg);
+            color: var(--text);
             margin: 0;
-            padding: 30px;
+            padding: 40px 20px;
         }
 
         .container {
             max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(17, 24, 39, 0.04);
         }
 
         h1 {
-            color: #6c4ab6;
+            color: var(--text);
+            margin: 0 0 18px;
+            font-size: 2rem;
+            letter-spacing: -0.04em;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         label {
             display: block;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-weight: 600;
         }
 
         input,
         textarea,
         select {
             width: 100%;
-            padding: 9px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 11px 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--text);
             box-sizing: border-box;
         }
 
         textarea {
-            height: 100px;
+            min-height: 110px;
+            resize: vertical;
         }
 
         button {
-            margin-top: 20px;
-            background: #6c4ab6;
+            margin-top: 22px;
+            background: var(--button);
             color: white;
             border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
+            padding: 11px 16px;
+            border-radius: 10px;
             cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background: var(--button-hover);
         }
 
         .back {
-            margin-left: 10px;
-            color: #6c4ab6;
+            margin-left: 12px;
+            color: var(--text);
             text-decoration: none;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -66,7 +97,7 @@
 
 <div class="container">
 
-    <h1>Add New Task</h1>
+    <h1>TASK MANAGER</h1>
 
     <form action="/tasks" method="POST">
         @csrf
